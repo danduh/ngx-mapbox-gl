@@ -2,6 +2,121 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.3.2"></a>
+## [2.3.2](https://github.com/Wykks/ngx-mapbox-gl/compare/v2.3.1...v2.3.2) (2018-12-17)
+
+
+### Bug Fixes
+
+* **layer:** fix layer event not being binded ([b7fbb89](https://github.com/Wykks/ngx-mapbox-gl/commit/b7fbb89)), closes [#84](https://github.com/Wykks/ngx-mapbox-gl/issues/84)
+* **map:** fitBounds: handle fitBounds at init ([d10ff55](https://github.com/Wykks/ngx-mapbox-gl/commit/d10ff55)), closes [#74](https://github.com/Wykks/ngx-mapbox-gl/issues/74)
+* **map:** fitScreenCoordinates: handle fitScreenCoordinates at init ([1126410](https://github.com/Wykks/ngx-mapbox-gl/commit/1126410))
+
+
+
+<a name="2.3.1"></a>
+## [2.3.1](https://github.com/Wykks/ngx-mapbox-gl/compare/v2.3.0...v2.3.1) (2018-12-10)
+
+
+
+<a name="2.3.0"></a>
+# [2.3.0](https://github.com/Wykks/ngx-mapbox-gl/compare/v2.2.0...v2.3.0) (2018-12-09)
+
+
+### Bug Fixes
+
+* **geocoder:** workaround mapbox-gl-geocoder result issue firing twice ([857ab77](https://github.com/Wykks/ngx-mapbox-gl/commit/857ab77)), closes [#59](https://github.com/Wykks/ngx-mapbox-gl/issues/59)
+* **mglImage:** re-add image when style change ([99a5bb7](https://github.com/Wykks/ngx-mapbox-gl/commit/99a5bb7)), closes [#76](https://github.com/Wykks/ngx-mapbox-gl/issues/76)
+
+
+### Features
+
+* Export control component, for custom control directives ([#79](https://github.com/Wykks/ngx-mapbox-gl/issues/79)) ([458c3f7](https://github.com/Wykks/ngx-mapbox-gl/commit/458c3f7)), closes [#78](https://github.com/Wykks/ngx-mapbox-gl/issues/78)
+* update support to mapbox-gl 0.51 ([2dddec8](https://github.com/Wykks/ngx-mapbox-gl/commit/2dddec8))
+
+
+
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/Wykks/ngx-mapbox-gl/compare/v2.1.1...v2.2.0) (2018-10-09)
+
+
+### Bug Fixes
+
+* **control:** add safety check to ngOnDestroy ([5b63325](https://github.com/Wykks/ngx-mapbox-gl/commit/5b63325)), closes [#53](https://github.com/Wykks/ngx-mapbox-gl/issues/53)
+
+
+### Features
+
+* update support to mapbox-gl 0.49 ([f45d965](https://github.com/Wykks/ngx-mapbox-gl/commit/f45d965))
+
+
+
+<a name="2.1.1"></a>
+## [2.1.1](https://github.com/Wykks/ngx-mapbox-gl/compare/v2.1.0...v2.1.1) (2018-09-09)
+
+
+
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/Wykks/ngx-mapbox-gl/compare/v2.0.0...v2.1.0) (2018-09-09)
+
+
+### Bug Fixes
+
+* **clustering:** get correct viewport box ([a864d3f](https://github.com/Wykks/ngx-mapbox-gl/commit/a864d3f)), closes [#54](https://github.com/Wykks/ngx-mapbox-gl/issues/54)
+
+
+### Features
+
+* update support to mapbox-gl 0.48 ([063f67c](https://github.com/Wykks/ngx-mapbox-gl/commit/063f67c))
+* **mglNavigation:** add showCompass & showZoom inputs ([b1428b0](https://github.com/Wykks/ngx-mapbox-gl/commit/b1428b0)), closes [#55](https://github.com/Wykks/ngx-mapbox-gl/issues/55)
+
+
+
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/Wykks/ngx-mapbox-gl/compare/v2.0.0-beta.0...v2.0.0) (2018-08-04)
+
+
+### Bug Fixes
+
+* re-add sources and layers after style change ([4c49629](https://github.com/Wykks/ngx-mapbox-gl/commit/4c49629)), closes [#43](https://github.com/Wykks/ngx-mapbox-gl/issues/43)
+* **popup:** do not send open/close event when moving an opened popup ([2b6f712](https://github.com/Wykks/ngx-mapbox-gl/commit/2b6f712)), closes [#48](https://github.com/Wykks/ngx-mapbox-gl/issues/48)
+
+
+### Features
+
+* update mapbox-gl to 0.47.0 ([69739bf](https://github.com/Wykks/ngx-mapbox-gl/commit/69739bf))
+* **popup:** add feature input ([df15d48](https://github.com/Wykks/ngx-mapbox-gl/commit/df15d48)), closes [#38](https://github.com/Wykks/ngx-mapbox-gl/issues/38)
+
+
+### BREAKING CHANGES
+
+* Update mapbox-gl to 0.47.0
+* Deprecate mglDraggable on Marker (now supported by mapbox-gl directly)
+
+
+
+<a name="2.0.0-beta.0"></a>
+# [2.0.0-beta.0](https://github.com/Wykks/ngx-mapbox-gl/compare/v1.2.0...v2.0.0-beta.0) (2018-06-16)
+
+
+### Features
+
+* full upgrade to angular 6 (& rxjs 6) ([18577cf](https://github.com/Wykks/ngx-mapbox-gl/commit/18577cf))
+
+
+### BREAKING CHANGES
+
+* Now angular 6 compatible only
+
+NgxMapboxGLModule.forRoot changed to NgxMapboxGLModule.withConfig
+
+
+
+<a name="1.2.1-beta.0"></a>
+## [1.2.1-beta.0](https://github.com/Wykks/ngx-mapbox-gl/compare/v1.2.0...v1.2.1-beta.0) (2018-06-16)
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/Wykks/ngx-mapbox-gl/compare/v1.1.0...v1.2.0) (2018-05-21)
 

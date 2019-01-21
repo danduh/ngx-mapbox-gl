@@ -3,7 +3,11 @@
 [![Build Status](https://travis-ci.org/Wykks/ngx-mapbox-gl.svg?branch=master)](https://travis-ci.org/Wykks/ngx-mapbox-gl)
 [![npm version](https://img.shields.io/npm/v/ngx-mapbox-gl.svg?style=flat)](https://www.npmjs.com/package/ngx-mapbox-gl)
 
-Angular (5+) wrapper for [mapbox-gl-js](https://www.mapbox.com/mapbox-gl-js/api/). Expose a bunch of component meant to be simple to use for Angular.
+Angular wrapper for [mapbox-gl-js](https://www.mapbox.com/mapbox-gl-js/api/). Expose a bunch of component meant to be simple to use for Angular.
+
+v1.X : Angular 5 & 6 (rxjs 5)
+
+v2.X : Angular 6 & 7 (rxjs 6)
 
 Include the following components:
 - [mgl-map](https://github.com/Wykks/ngx-mapbox-gl/wiki/API-Documentation#mgl-map-mapbox-gl-api)
@@ -29,11 +33,11 @@ Include the following components:
 ## How to start
 
 ```
-npm install ngx-mapbox-gl mapbox-gl --save
+npm install ngx-mapbox-gl mapbox-gl@0.51.0 --save
 ```
-Also add mapbox-gl types if using typescript
+If using typescript add mapbox-gl types 
 ```
-npm install @types/mapbox-gl --save-dev
+npm install @types/mapbox-gl@0.51.0 --save-dev
 ```
 
 Load the css of mapbox-gl (and mapbox-gl-geocoder if mglGeocoder is used)
@@ -61,14 +65,20 @@ import { NgxMapboxGLModule } from 'ngx-mapbox-gl';
 @NgModule({
   imports: [
     ...
-    NgxMapboxGLModule.forRoot({
-      accessToken: 'TOKEN', // Can also be set per map (accessToken input of mgl-map)
+    NgxMapboxGLModule.withConfig({
+      accessToken: 'TOKEN', // Optionnal, can also be set per map (accessToken input of mgl-map)
       geocoderAccessToken: 'TOKEN' // Optionnal, specify if different from the map access token, can also be set per mgl-geocoder (accessToken input of mgl-geocoder)
     })
   ]
 })
 export class AppModule {}
 ```
+
+How to get a mapbox token: https://www.mapbox.com/help/how-access-tokens-work/
+
+Note: mapbox-gl can works without token, if you have your own source, example: https://stackblitz.com/edit/ngx-mapbox-gl-without-token
+
+You can use https://github.com/klokantech/tileserver-gl to serve vector tiles
 
 Display a map
 ```typescript
@@ -99,11 +109,8 @@ export class DisplayMapComponent { }
 
 \>= 1.5.5 version is required (https://github.com/angular/angular-cli/issues/5804)
 
-< 1.5.5 version users can use this patch: https://github.com/angular/angular-cli/pull/7931 (available in this repo as ngcli-comparisons-false.patch)
+< 1.5.5 version users can use this patch: https://github.com/angular/angular-cli/pull/7931
 
 ### Webpack users:
 
 Add `noParse: /(mapbox-gl)\.js$/`
-
-## Built with ngx-mapbox-gl
-Todo
